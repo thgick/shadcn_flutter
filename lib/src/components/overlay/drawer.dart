@@ -1321,11 +1321,11 @@ class DrawerEntryWidgetState<T> extends State<DrawerEntryWidget<T>>
     super.initState();
     _controller = widget.animationController ??
         AnimationController(
-            vsync: this, duration: const Duration(milliseconds: 350));
+            vsync: this, duration: const Duration(milliseconds: 950)); // thgick
 
     _controlledAnimation = ControlledAnimation(_controller);
     if (widget.animationController == null && widget.autoOpen) {
-      _controlledAnimation.forward(1, Curves.easeOut);
+      _controlledAnimation.forward(1, Curves.easeInOut); // thgick
     }
     // discard any focus that was previously set
     FocusManager.instance.primaryFocus?.unfocus();
