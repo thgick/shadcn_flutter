@@ -1321,7 +1321,7 @@ class DrawerEntryWidgetState<T> extends State<DrawerEntryWidget<T>>
     super.initState();
     _controller = widget.animationController ??
         AnimationController(
-            vsync: this, duration: const Duration(milliseconds: 950)); // thgick
+            vsync: this, duration: const Duration(milliseconds: 500)); // thgick
 
     _controlledAnimation = ControlledAnimation(_controller);
     if (widget.animationController == null && widget.autoOpen) {
